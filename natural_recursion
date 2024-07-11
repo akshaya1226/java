@@ -1,0 +1,27 @@
+package java1;
+import java.util.Scanner;
+public class natural_rec {
+
+	public static void main(String[] args) {
+
+		        Scanner scan = new Scanner(System.in);
+		        System.out.println("Enter a positive integer:");
+		        int number = scan.nextInt();
+		        if (number < 1) {
+		            System.out.println("Please enter a positive integer.");
+		        } else {
+		            int sum = sumOfNaturalNumbers(number);
+		            System.out.println("The sum of natural numbers up to " + number + " is: " + sum);
+		        }
+
+		        scan.close(); 
+		    }
+
+		    public static int sumOfNaturalNumbers(int num) {
+		        if (num == 1) {
+		            return 1; 
+		        } else {
+		            return num + sumOfNaturalNumbers(num - 1); 
+		        }
+		    }
+}
