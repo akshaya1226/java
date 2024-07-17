@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello, ";
+        String str2 = "World!";
+        
+        // Using concat method
+        String result = str1.concat(str2);
+        
+        // Print the result
+        System.out.println(result); // Outputs: Hello, World!
+    }
+}
