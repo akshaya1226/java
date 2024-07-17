@@ -1,0 +1,9 @@
+public class LastWordLength {
+    public static void main(String[] args) {
+        String s = "Hello World";
+        s = s.trim();
+        String[] words = s.split(" ");
+        int lengthOfLastWord = words[words.length - 1].length();
+        System.out.println("Length of the last word: " + lengthOfLastWord);
+    }
+}
