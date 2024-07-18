@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class NthOddNumberAfterN {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+     
+        System.out.print("Enter the value of N: ");
+        int n = scanner.nextInt();
+
+    
+        int nthOddNumber = 2 * n - 1; // Formula to find the nth odd number
+
+   
+        System.out.println("The " + n + "th Odd number after " + n + " odd numbers = " + nthOddNumber);
+
+
+        
+    }
+}
