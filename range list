@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PerfectSquares {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter lower range: ");
+        int lowerRange = scanner.nextInt();
+        System.out.print("Enter upper range: ");
+        int upperRange = scanner.nextInt();
+        ArrayList<Integer> perfectSquares = new ArrayList<>();
+        for (int i = lowerRange; i <= upperRange; i++) {
+            int sqrt = (int) Math.sqrt(i);
+            if (sqrt * sqrt == i) { 
+                int sumOfDigits = 0;
+                int num = i;
+                while (num > 0) {
+                    sumOfDigits += num % 10;
+                    num /= 10;
+                }
+                if (sumOfDigits < 10) { 
+                    perfectSquares.add(i);
+                }
+            }
+        }
+        System.out.println(perfectSquares);
+    }
+}
