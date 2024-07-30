@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class CompositeNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Get input from the user
+        System.out.print("Enter the value for a: ");
+        int a = scanner.nextInt();
+        System.out.print("Enter the value for b: ");
+        int b = scanner.nextInt();
+        
+        // Print composite numbers between a and b
+        System.out.print("Composite numbers between " + a + " and " + b + ": ");
+        
+        for (int num = a; num <= b; num++) {
+            if (num > 1) { // Composite numbers are greater than 1
+                int count = 0;
+                for (int i = 1; i <= num; i++) {
+                    if (num % i == 0) {
+                        count++;
+                    }
+                }
+                // If the number has more than 2 divisors, it is composite
+                if (count > 2) {
+                    System.out.print(num + " ");
+                }
+            }
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
