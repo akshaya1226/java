@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class OddNumberFinder {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Get the value of N from the user
+        System.out.print("Enter the value of N: ");
+        int n = scanner.nextInt();
+        
+        // Compute the nth odd number after n odd numbers
+        int nthOddNumberAfterN = 2 * (2 * n + n) - 1;
+        
+        // Output the result
+        System.out.println(n + "th Odd number after " + n + " odd numbers = " + nthOddNumberAfterN);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
